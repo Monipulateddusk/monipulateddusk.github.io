@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    Connect to the Google Fonts page for use of their fonts.    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
     <title>Nathan Brennan Portfolio</title>
 </head>
 <body>
-    <h1> Portfolio Website.</h1>
-    <p1> This is hosted with GitHub Pages!</p1>
+    <header class="navigation-bar">
+        <nav class="nav-bar">
+            <div class="nav-name">
+                <h1>Nathan Brennan</h1>
+                <p>Programmer / Software Developer</p>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--    Splash Section -->
+    <section id="splash" class="splash-section">
+        <div class="splash-content">
+            <h2>Building clean, scalable code for the web.</h2>
+            <a href="#projects" class="splash-button">View Work</a>
+        </div>
+    </section>
+
+    <!--    Projects Section    -->
+    <hr>
+    <section id="projects" class="projects-section">
+        <h2> My Projects:</h2>
+        <div id="project-grid"></div>
+
+    </section>
+
+    <!--    About Section   -->
+    <section id="about" class="about-section">
+
+
+
+    </section>
+    <!--    Contact Section -->
+    <section id="contact" class="contact-section">
+
+    </section> 
+
+    <!--    Bind the JavaScript File to the Web Page    -->
+    <script src="index.js"></script>
 </body>
 </html>
