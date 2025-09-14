@@ -1,18 +1,18 @@
 :root{
     /*  Accent Red Colours  */
-    --button-base:      #8f261e;
-    --button-hover:     #a33d34;
-    --button-pressed:   #6a1d16;
-    --button-extra:     #4a130e;
+    --button-base:      white;    /*8f261e*/
+    --button-hover:     white;    /*a33d34*/
+    --button-pressed:   white;    /*6a1d16*/
+    --button-extra:     white;    /*4a130e*/
 
     /*  Background Colours  */
-    --background-base:          #282a51;
-    --background-card:          #343766;
-    --background-card-hover:    #414C7D;
-    --background-card-active:   #2F3A60;
+    --background-base:          white;    /*282a51*/
+    --background-card:          white;    /*343766*/
+    --background-card-hover:    white;    /*414C7D*/
+    --background-card-active:   white;    /*2F3A60*/
 
     /*  Text Colours        */
-    --text-base:        #FFFFFF;
+    --text-base:        black;    /*FFFFFF*/
 
     /*  Font Charactaristics*/
     --font-family-default: "JetBrains Mono", monospace;
@@ -111,7 +111,12 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 40vh;
+}
+
+.splash-content{
+    text-decoration: none;
+
 }
 
 .splash-button{
@@ -129,6 +134,49 @@ hr{
 
 .splash-button:active{
     background-color: var(--button-pressed);
+}
+
+.splash-socials{
+    /*  Hide the LI formatting */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;  
+}
+
+.splash-socials li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.splash-socials a{
+    display: inline-block;
+    height:100px;
+    width:100px;
+
+    /*  Hide the text */
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.blueskySocial{
+    background: url('/Images/BlueSkyIcon.svg') no-repeat center;
+    background-size: contain;
+}
+
+.githubSocial{
+    background: url('/Images/GithubIcon.svg') no-repeat center;
+    background-size: contain;
+}
+
+.linkedinSocial{
+    background: url('/Images/LinkedinIcon.svg') no-repeat center;
+    background-size: contain;
 }
 
 /*#endregion    */
