@@ -114,9 +114,14 @@ hr{
     height: 40vh;
 }
 
-.splash-content{
-    text-decoration: none;
+.splash-content p a{
+    text-decoration:none;
+    font-weight: bold;
+    color: black;
+}
 
+.splash-content p a:hover{
+    color: red;
 }
 
 .splash-button{
@@ -182,9 +187,15 @@ hr{
 /*#endregion    */
 
 /*#region  Project card Style  */
+
+.projects-section{
+
+}
+
 #project-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
     gap: 1.5rem;
 }
 
