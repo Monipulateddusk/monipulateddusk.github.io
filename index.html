@@ -57,14 +57,54 @@
     <section id="projects" class="projects-section">
         <h2> My Projects:</h2>
         <div id="project-grid"></div>
-
     </section>
 
     <!--    About Section   -->
     <hr>
     <section id="about" class="about-section">
         <h2>About me:</h2>
-        <p>Ever since I was young, I was curious how certain mechanics in games were done. So, as a Software Developer with a focus on Games Programming, I am always asking "Why does it work this way?"</p>
+        <div>
+            <p>Ever since I was young, I was curious how certain mechanics in games were done. So, as a Software Developer with a focus on Games Programming, I am always asking "Why does it work this way?"</p>
+            <p>From developing Video Games, I have developed many skills including:</p>
+            <ul>
+                <li>
+                    <ul>Programming/Scripting Languages:
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>Lua</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>Engines:
+                        <li>Unity Engine</li>
+                        <li>Unreal Engine</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>2D Art:
+                        <li>Paint.Net</li>                        
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>3D Art:
+                        <li>Blender</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>Audio Development
+                        <li>Audacity</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>When I am not developing or playing games, I enjoy time away from my computer.</p>
+            <p>Activities such as: Cooking and Gardening help me ground myself, taking each day as it comes while cooking or growing for friends and family.</p>
+        </div>
+        
         
 
 
@@ -72,7 +112,37 @@
     <!--    Contact Section -->
     <hr>
     <section id="contact" class="contact-section">
-        <h2>Contact:</h2>
+        <div>
+            <h2 class="contact-intro">Contact:</h2>
+            <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+            <p class="contact-disclaimer"><a>Email address</a>, <a>Location</a> and <a>Resume</a> available on request.</p>
+        </div>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="bc5be5da-4073-42b8-930a-68699c44d59c"/>
+            <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+            <input type="hidden" name="from_name" value="My Website" /> 
+
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text"/>
+                </div>
+
+                 <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email"/>
+                </div>  
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                </div>            
+            </div>
+
+            <button class="form-submit" type="submit">Send Message</button>
+        </form>
+
     </section> 
 
     <!--    Footer Section  -->
