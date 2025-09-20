@@ -55,8 +55,8 @@ hr{
     width: 65%;  
     margin: 0 auto;
 
-    border-top: dotted;
-    border-bottom: dotted;
+    border-top: ridge;
+    border-bottom: ridge;
     border-left: double 10px;
     border-right: double 10px;
     border-color: black;
@@ -170,17 +170,17 @@ hr{
 }
 
 .blueskySocial{
-    background: url('/Images/BlueSkyIcon.svg') no-repeat center;
+    background: url('Images/Icons/BlueSkyIcon.svg') no-repeat center;
     background-size: contain;
 }
 
 .githubSocial{
-    background: url('/Images/GithubIcon.svg') no-repeat center;
+    background: url('Images/Icons/GithubIcon.svg') no-repeat center;
     background-size: contain;
 }
 
 .linkedinSocial{
-    background: url('/Images/LinkedinIcon.svg') no-repeat center;
+    background: url('Images/Icons/LinkedinIcon.svg') no-repeat center;
     background-size: contain;
 }
 
