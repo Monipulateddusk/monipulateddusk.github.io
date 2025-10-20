@@ -58,7 +58,7 @@ EoF
 cd "$PROJECT_HTML_PAGES_PATH"
 
 # Get the raw text of our template website and copy it's contents to the extra files to be created
-TEMPLATE_WEBSITE_TEXT=
+#TEMPLATE_WEBSITE_TEXT=
 
 for i in {1..5}; do
     touch "file$i".html
