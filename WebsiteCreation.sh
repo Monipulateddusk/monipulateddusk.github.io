@@ -57,17 +57,35 @@ EoF
 # It is in "" to allow it to work an arguement if the directory contains spaces.
 cd "$PROJECT_HTML_PAGES_PATH"
 
-# Get the raw text of our template website and copy it's contents to the extra files to be created
-#TEMPLATE_WEBSITE_TEXT=
+# Declare temp vars to test string substitution
+TEMP_TITLE="This is a temp title. HUEHUEHUEHEUHEUE"
+TEMP_DESC="This is a temp Description. The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start."
+TEMP_IMAGE_PATH="../Images/Icons/GCULogo.svg"
 
 for i in {1..5}; do
     touch "file$i".html
-    # Create the HTML boilerplate
-    echo "$header" > "file$i.html"
 
-    # Create the testing HTML code
-    echo "$testFunctionality" >> "file$i.html"
+    # Get the raw text of our template website and copy it's contents to the extra files to be created
+    while IFS= read -r LINE; do
+        # Check the line. Does it contain 'PROJECT_TITLE'? If so, replace with a temp var for now
+        if grep -q "PROJECT_TITLE" <<< "$LINE"; then
+            echo "${LINE/PROJECT_TITLE/$TEMP_TITLE}" >> "file$i".html
 
-    # Create the footer for the HTML doc
-    echo "$footer" >> "file$i.html"
+        # Check the line. Does it contain 'PROJECT_DESC'? If so, replace with a temp var for now
+        elif grep -q "PROJECT_DESC" <<< "$LINE"; then
+            echo "${LINE/PROJECT_DESC/$TEMP_DESC}" >> "file$i".html
+        
+        # Check the line. Does it contain 'PROJECT_IMAGE'? If so, replace with a temp var for now
+        elif grep -q "PROJECT_IMAGE" <<< "$LINE"; then
+            echo "${LINE/PROJECT_IMAGE/$TEMP_IMAGE_PATH}" >> "file$i".html
+
+        else
+            echo "$LINE" >> "file$i".html
+
+        fi
+    done < "$PROJECT_HTML_PAGES_PATH/_ProjectPageTemplate.html"
+
+
 done
+
+read _
