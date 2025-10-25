@@ -32,7 +32,14 @@ function CreateHTMLPage(){
         
         # Check the line. Does it contain 'PROJECT_IMAGE'? If so, replace with a temp var for now
         elif grep -q "PROJECT_IMAGE" <<< "$LINE"; then
-            echo "${LINE/PROJECT_IMAGE/$IMAGE_PATHS}" >> "$FILE_NAME".html
+            IFS="," read -ra ARRAY <<< "$IMAGE_PATHS"
+
+            for i in "${ARRAY[@]}"; do
+                echo "${LINE/PROJECT_IMAGE/$i}" >> "$FILE_NAME".html
+            done
+
+
+           # echo "${LINE/PROJECT_IMAGE/$IMAGE_PATHS}" >> "$FILE_NAME".html
 
         else
             echo "$LINE" >> "$FILE_NAME".html
