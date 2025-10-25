@@ -41,22 +41,25 @@ function CreateHTMLPage(){
     done < "$PROJECT_HTML_PAGES_PATH/_ProjectPageTemplate.html"
 }
 
-function ReadINIFile(){
+function ReadENVFile(){
     # Clear the contents of the Projects subfolder. The '*' allows bash to not care about the names of the folders, just to delete all files and folders within the specified directory
     rm -rf "$PROJECT_HTML_PAGES_PATH"/Projects/*
 
-    # Declare temp vars to test string substitution
-    TEMP_TITLE="This is a temp title. HUEHUEHUEHEUHEUE"
-    TEMP_DESC="This is a temp Description. The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start."
-    TEMP_IMAGE_PATH="../../Images/Icons/GCULogo.svg"
+    # Get the .env file
+    source "$SCRIPT_DIR"/ProjectData.env
 
-    for i in {1..5}; do
-        CreateHTMLPage "file$i" "$TEMP_TITLE" "$TEMP_DESC" "$TEMP_IMAGE_PATH"
+    for i in $( seq 1 $PROJECT_COUNT); do
+        # Declare name, desc and image vars. We use this with Indirect Parameter Expression to get the variable named inside the value declared. 
+        # E.g. if in our name var we have: 'PROJECT1_NAME' we will get:'Project1' from our ProjectData.env file
+        name="PROJECT${i}_NAME"
+        desc="PROJECT${i}_DESC"
+        img="PROJECT${i}_IMAGE"
+        CreateHTMLPage "${!name}" "${!name}" "${!desc}" "${!img}"
     done
 
 }
 
-ReadINIFile
+ReadENVFile
 
 
 read -p "PROGRAM DONE! PRESS 'ENTER' TO CLOSE!"
