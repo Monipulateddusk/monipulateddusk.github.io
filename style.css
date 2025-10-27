@@ -347,6 +347,7 @@ hr{
 }
 
 .form-submit {
+
     width: 100%;
     margin-top: 1.2rem;
     background-color: #247fca;
@@ -357,3 +358,11 @@ hr{
 
 
 /*#endregion    */
+
+
+/*  This is how we can count how many Li elements there are on a page. 
+Currently we are just applying it to a h3 element, but we can see if we can use 'NUM' elsewhere in code. If so, we can count how many images we have in a container
+*/
+#TEST {counter-reset:NUM;}
+#TEST > li {counter-increment:NUM; }
+#test:before {content:counter(NUM);}
