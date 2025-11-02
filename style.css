@@ -359,10 +359,41 @@ hr{
 
 /*#endregion    */
 
+/*#region   Project pages Style*/
 
-/*  This is how we can count how many Li elements there are on a page. 
-Currently we are just applying it to a h3 element, but we can see if we can use 'NUM' elsewhere in code. If so, we can count how many images we have in a container
-*/
-#TEST {counter-reset:NUM;}
-#TEST > li {counter-increment:NUM; }
-#test:before {content:counter(NUM);}
+.ImageSlider{
+    width: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+}
+
+.ImageSlider ul{
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 5s linear infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ImageSlider li{
+    flex: 1 0 auto;
+}
+
+.ImageSlider img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-157.5%);
+  }
+}
+
+/*#endregion    */
