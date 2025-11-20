@@ -1,0 +1,102 @@
+:root{
+    /*  Accent Red Colours  */
+    --button-base:      white;    /*8f261e*/
+    --button-hover:     white;    /*a33d34*/
+    --button-pressed:   white;    /*6a1d16*/
+    --button-extra:     white;    /*4a130e*/
+
+    /*  Background Colours  */
+    --background-base:          white;    /*282a51*/
+    --background-card:          white;    /*343766*/
+    --background-card-hover:    white;    /*414C7D*/
+    --background-card-active:   white;    /*2F3A60*/
+
+    /*  Text Colours        */
+    --text-base:        black;    /*FFFFFF*/
+
+    /*  Font Charactaristics*/
+    --font-family-default: "JetBrains Mono", monospace;
+    --FONT-FAMILY-PIXELIFY: "Pixelify Sans", monospace;
+}
+
+body{
+    font-family: var(--font-family-default);
+    background: #f0f0f0;
+}
+
+.projectPage{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "desc slideshow";
+
+    grid-template-columns: 40% 60%;
+    gap: 3px;
+    padding: 5px;
+}
+
+.projectPage div{
+    padding: 0px;
+}
+
+.projectTitle{
+    grid-area: title;
+    text-align: left;
+}
+.projectDescription
+{
+    grid-area: desc;
+}
+.slideShowContainer
+{
+    grid-area: slideshow;
+    position: relative;
+}
+
+.portfolioImageContainer{
+    aspect-ratio: 1;
+    width: 100%;
+    overflow: hidden;
+
+    /*  Testing outline so I can see borders*/
+    outline: 2px dashed red;
+    padding-left: 20px;
+}
+
+.portfolioImage{
+    width: clamp(250px, 60vw, 850px);
+    height: auto;
+    object-fit: cover;
+}
+
+.projectPage a{
+    background-color: rgb(255, 85, 85);
+    border-radius: 2px;
+    border: solid;
+    border-color: black;
+}
+
+.numberText{
+    position: absolute;
+    top: 1fr;
+    text-align: center;
+    text-shadow: 2px 2px 2px white;
+    color: rgb(255, 85, 85)
+}
+
+.prev, .next{
+    position: absolute;
+    top: 50%
+}
+
+.prev{
+    left: 30px;
+    width: 3%;
+    text-align: center;
+}
+
+.next{
+    right: 10px;
+    width: 3%;
+    text-align: center;
+}

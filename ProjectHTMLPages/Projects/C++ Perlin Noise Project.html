@@ -10,7 +10,7 @@
         
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../styleProjectPage.css">
         <title>Nathan Brennan Portfolio</title>
         
         <!--    Used RealFaviconGenerator to create Multi-Platform versions of my Favicon   -->
@@ -20,12 +20,42 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../../Images/Icons/Favicon/apple-touch-icon.png" />
         <link rel="manifest" href="../../Images/Icons/Favicon/site.webmanifest" />
     </head>
-    <body style="position:relative; left: 0%;">
-        <h1 class="P_Title"> C++ Perlin Noise Project</h1>
-        <p class="P_Desc">Generic description for my perlin noise project created in 4th Year of University. It makes use of C++ and GLSL with OpenGL intergration to render 3D and 2D elements to the camera. Custom user interface was created enabling users to effect the algorithm to generate the Perlin Noise.</p>
+    <body>
 
-        <img class="P_Image" src="../../Images\ProjectImages\ProjectGifs\PerlinNoiseShowcase.gif" width="45%" style="float: right; margin-right: 3%;">
-        <img class="P_Image" src=" filepath2" width="45%" style="float: right; margin-right: 3%;">
-        <img class="P_Image" src=" filepath3" width="45%" style="float: right; margin-right: 3%;">
+        <div class="projectPage">
+
+            <div class="projectTitle"><h1>C++ Perlin Noise Project</h1></div>
+
+
+            <div class="projectDescription">
+                <p class="P_Desc">Generic description for my perlin noise project created in 4th Year of University. It makes use of C++ and GLSL with OpenGL intergration to render 3D and 2D elements to the camera. Custom user interface was created enabling users to effect the algorithm to generate the Perlin Noise.</p>
+            </div>
+
+            <div class="slideShowContainer">
+                <div class="slides">
+                    <div class="numberText">1/3</div>
+                    <div class="portfolioImageContainer"><img class="portfolioImage" src="../../Images\ProjectImages\ProjectGifs\PerlinNoiseShowcase.gif"></div>                    
+                    <div class="portfolioText">Caption Text</div>
+                </div>
+                <div class="slides">
+                    <div class="numberText">2/3</div>
+                    <div class="portfolioImageContainer"><img class="portfolioImage" src="../../Images\Icons\BlueSkyIcon.svg"></div>
+                    <div class="portfolioText">Caption Text</div>
+                </div>
+                <div class="slides">
+                    <div class="numberText">3/3</div>
+                    <div class="portfolioImageContainer"><img class="portfolioImage" src="../../Images\Icons\GithubIcon.svg"></div>
+                    <div class="portfolioText">Caption Text</div>
+                </div>
+
+                <a class="prev" onclick="decrementSlides(1)">❮</a>
+                <a class="next" onclick="incrementSlides(1)">❯</a>
+
+            </div>
+
+        </div>
+
     </body>
+
+    <script src="../../projectPageScript.js"></script>
 </html>
