@@ -47,9 +47,10 @@ body{
 {
     grid-area: desc;
 }
-.slideShowContainer
-{
+.slideShowContainer {
     grid-area: slideshow;
+    display: grid;
+    place-items: center;
     position: relative;
 }
 
@@ -60,13 +61,10 @@ body{
 
     /*  Testing outline so I can see borders*/
     outline: 2px dashed red;
-    padding-left: 20px;
 }
 
 .portfolioImage{
-    width: clamp(250px, 60vw, 850px);
-    height: auto;
-    object-fit: cover;
+    width: clamp(250px, 50vw, 850px);
 }
 
 .projectPage a{
@@ -84,19 +82,22 @@ body{
     color: rgb(255, 85, 85)
 }
 
-.prev, .next{
+.prev, .next {
     position: absolute;
-    top: 50%
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgb(255, 85, 85);
+    border-radius: 2px;
+    border: solid black;
+    padding: 4px 8px;
+    cursor: pointer;
 }
 
-.prev{
-    left: 30px;
-    width: 3%;
-    text-align: center;
+.prev {
+    left: clamp(2px, 1.5vw, 12px);
 }
 
-.next{
-    right: 10px;
-    width: 3%;
-    text-align: center;
+.next {
+    right: clamp(2px, 1.5vw, 12px);
 }
