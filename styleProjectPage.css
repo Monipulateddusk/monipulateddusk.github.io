@@ -64,7 +64,7 @@ body{
 }
 
 .portfolioImage{
-    width: clamp(250px, 50vw, 850px);
+    width: clamp(250px, 30vw, 850px);
 }
 
 .projectPage a{
@@ -92,12 +92,17 @@ body{
     border: solid black;
     padding: 4px 8px;
     cursor: pointer;
+
+    /*  Make the text on the button unselectable    */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .prev {
-    left: clamp(2px, 1.5vw, 12px);
+    left: clamp(4px, 7.25vw, 150px);
 }
 
 .next {
-    right: clamp(2px, 1.5vw, 12px);
+    right: clamp(4px, 7.25vw, 150px);
 }
